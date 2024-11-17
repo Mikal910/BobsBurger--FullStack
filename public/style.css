@@ -1,7 +1,54 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
+  background-color:#ffeb99;
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
 }
 img{
-  height: 200px;
+  height: 300px;
+  border-radius: 10px;
+  border: 5px solid #d12a24;
+}
+.btn {
+  background-color: #d9534f; /* Red color similar to Bob's apron */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #c9302c; /* Darker red for hover effect */
+  color: #f1f1f1;
+}
+
+/* Jumbotron styling */
+.jumbotron {
+  background-color: #e7991a; /* Bright orange to match the show's title background */
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.jumbotron h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #333; /* Subtle shadow for text */
+}
+
+.jumbotron p {
+  font-size: 18px;
+}
+
+/* Button icons */
+.fa-user {
+  margin-right: 5px;
+}
+
+/* Additional styling */
+a {
+  text-decoration: none;
 }

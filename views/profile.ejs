@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>21 Savage Fan Site</title>
+    <title>Bobs Burger Fan Site</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
@@ -16,36 +16,28 @@
 
     <div class="row">
 
-        <!-- LOCAL INFORMATION -->
+        <!--Favs-->
         <div class="col-sm-6">
-            <div class="well">
-                <h3><span class="fa fa-user"></span> Local</h3>
-
-                <% if (user.local.email) { %>
-                    <p>
-                        <strong>id</strong>: <%= user._id %><br>
-                        <strong>email</strong>: <%= user.local.email %><br>
-                        <strong>password</strong>: <%= user.local.password %>
-                    </p>
-
-                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
-                <% } else { %>
-                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
-                <% } %>
-
-            </div>
+            <h3>Favorites</h3>
+            <ul class="favorites">
+              <% for(var i=0; i<favorites.length; i++) {%>
+                <li class="message">
+                  <span><%= favorites[i].name %></span>
+                  
+                  
+                  <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                </li>
+              <% } %>
+              </ul>
         </div>
         <div class="col-sm-6">
-          <h3>Messages</h3>
-          <ul class="messages">
-          <% for(var i=0; i<messages.length; i++) {%>
+          <h3>Characters</h3>
+          <ul class="characters">
+          <% for(var i=0; i<characters.length; i++) {%>
             <li class="message">
-              <span><%= messages[i].name %></span>
-              <span><%= messages[i].msg %></span>
-              <span><%= messages[i].thumbUp %></span>
-              <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
-              <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
-              <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+              <span><%= characters[i].name %></span>
+              <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+              
             </li>
           <% } %>
           </ul>
